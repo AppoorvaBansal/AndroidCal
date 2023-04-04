@@ -17,6 +17,12 @@ class Experiment3_CalculatorActivity : AppCompatActivity() {
         setContentView(binding.root)
       //  binding.txtwrite.showSoftInputOnFocus(false)
 
+        binding.btn9.setOnClickListener {
+            val pre=binding.txtwrite.text.toString()
+            binding.txtwrite.setText(pre+"09")
+            result()
+        }
+
         binding.btn0.setOnClickListener {
             val pre=binding.txtwrite.text.toString()
             binding.txtwrite.setText(pre+"0")
@@ -102,14 +108,13 @@ class Experiment3_CalculatorActivity : AppCompatActivity() {
 
             if(length>0){
                 binding.txtwrite.setText(str.substring(0,length-1))
+                result()
             }
             else{
                 binding.txtwrite.setText("0")
             }
 
         }
-
-
 
     }
 

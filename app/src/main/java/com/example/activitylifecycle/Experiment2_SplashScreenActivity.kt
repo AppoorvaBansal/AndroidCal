@@ -14,6 +14,8 @@ class Experiment2_SplashScreenActivity : AppCompatActivity() {
         binding=ActivityExperiment2SplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.hide()
+
         var txt=binding.textView.text.toString()
 
         Handler().postDelayed({
